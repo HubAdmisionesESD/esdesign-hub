@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Propuesta económica · ESDESIGN</title>
+<style>
+:root{--bg:#f6f5f2;--card:#fff;--tx:#1a1a1a;--mut:#6b6b6b;--bd:#ddd9d2;--ac:#e8762d;--hd:#111;--hdt:#fff;--sh:#ececec;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#16161a;--card:#202026;--tx:#f0efec;--mut:#a3a3a8;--bd:#37373f;--ac:#f08a45;--hd:#000;--hdt:#fff;--sh:#2a2a31;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#16161a;--card:#202026;--tx:#f0efec;--mut:#a3a3a8;--bd:#37373f;--ac:#f08a45;--hd:#000;--hdt:#fff;--sh:#2a2a31;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:14px/1.45 Arial,Helvetica,sans-serif}
+.wrap{max-width:1240px;margin:0 auto;padding:16px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:12px}
+.logo{font-size:26px;font-weight:700;letter-spacing:.5px}.logo b{color:var(--ac)}.logo small{display:block;font-size:10px;font-weight:400;color:var(--mut);letter-spacing:1px}
+button{font:inherit;border:1px solid var(--bd);background:var(--card);color:var(--tx);padding:8px 12px;border-radius:6px;cursor:pointer}
+button.p{background:var(--ac);border-color:var(--ac);color:#fff;font-weight:700}
+h2{margin:0;background:var(--hd);color:var(--hdt);font-size:15px;padding:8px 12px;border-radius:6px 6px 0 0}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:6px;margin-bottom:14px}
+.body{padding:12px}
+.g{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px}
+label{display:block;font-size:12px;color:var(--mut);margin-bottom:2px}
+input,select{width:100%;font:inherit;padding:7px 8px;border:1px solid var(--bd);border-radius:5px;background:var(--bg);color:var(--tx)}
+.row{display:grid;grid-template-columns:2fr repeat(3,1fr);gap:8px;margin-bottom:8px;align-items:end}
+.row.d{grid-template-columns:2fr 1fr}
+.sc{overflow-x:auto}
+table{border-collapse:collapse;width:100%;min-width:640px}
+th,td{padding:7px 8px;border-bottom:1px solid var(--bd);text-align:right;vertical-align:top}
+th:first-child,td:first-child{text-align:left}
+th{background:var(--ac);color:#fff;font-size:13px}
+td small{display:block;color:var(--ac);font-size:12px}
+tr.fin td,tr.ins td{background:var(--sh);font-weight:700}
+.pg{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.pcol{display:grid;gap:8px;align-content:start;border:1px solid var(--bd);border-radius:6px;padding:10px}
+@media (max-width:760px){.pg{grid-template-columns:1fr 1fr}}
+#res{min-width:0;font-size:12.5px;border-collapse:separate;border-spacing:0}
+#res td{padding:3px 2px;border-bottom:0;text-align:right;vertical-align:middle;white-space:nowrap}
+#res td:first-child{text-align:right}
+#res td.lb{padding-right:6px;min-width:118px}
+#res td.mh{background:var(--ac);color:#fff;text-align:center;font-weight:700;padding:5px 6px}
+#res td.spc{width:6px;padding:0}
+#res td.loc{color:var(--ac)}
+#res td.gy{background:var(--sh)}
+#res td.dk{background:#666;color:#fff;font-weight:700}
+#res td.dk.loc{color:#fff}
+#res td.pc{text-align:right;min-width:40px}
+#res tr.rsp td{height:8px;padding:0}
+@media print{@page{size:A4 portrait;margin:10mm}#res{min-width:0;font-size:9.5px}#res td{padding:2px 4px}.sc{overflow:visible}}
+#res.noloc td.loc{display:none}
+#res input{width:100%;font:inherit;padding:2px 4px;border:1px solid transparent;background:transparent;border-radius:4px;color:inherit}
+#res input:hover,#res input:focus{border-color:var(--bd);background:var(--bg);color:var(--tx)}
+#res td.mh input{color:#fff;text-align:center;font-weight:700}
+#res td.mh input:hover,#res td.mh input:focus{background:rgba(255,255,255,.2);border-color:rgba(255,255,255,.6);color:#fff}
+#res .pw input{padding-right:18px;text-align:left}
+#res td.pc{min-width:56px;width:56px}
+#res .dti{width:auto;max-width:128px;font-size:12px;text-align:right}
+@media print{#res input{border:0!important;background:transparent!important;-webkit-appearance:none;appearance:none;color:inherit!important}#res td.mh input{color:#fff!important}.dti::-webkit-calendar-picker-indicator{display:none}.dti.empty{color:transparent!important}}
+#res .pblk{max-width:820px;margin:0 0 16px;border:1px solid var(--bd);border-radius:10px;overflow:hidden;break-inside:avoid;page-break-inside:avoid}
+#res .ph{display:flex;gap:8px;align-items:center;background:var(--ac);padding:7px 10px}
+#res .ph select{flex:1;max-width:340px;font-weight:700;background-color:transparent;color:#fff;border:1px solid rgba(255,255,255,.65);-webkit-appearance:none;appearance:none;padding-right:30px;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'><path d='M1 1l5 5 5-5' fill='none' stroke='white' stroke-width='2'/></svg>");background-repeat:no-repeat;background-position:right 10px center}
+#res .ph select:hover,#res .ph select:focus,#res .ph select:active{background-color:rgba(255,255,255,.18);color:#fff;outline:none;border-color:#fff}
+#res .ph select option{background:#fff;color:#222}
+#res .ph button{padding:5px 12px;background:transparent;color:#fff;border:1px solid rgba(255,255,255,.65)}
+#res .ph button:hover{background:rgba(255,255,255,.2)}
+#res table.pt{width:100%;border-collapse:separate;border-spacing:0;margin:4px 0}
+#res td.lb{min-width:190px}
+#res td.pc{min-width:76px;width:76px;text-align:left;padding-left:2px}
+@media print{#res .ph{background:var(--ac)!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}#res .ph select{color:#fff!important;border:0;background:transparent}.ph button{display:none}}
+#res input[readonly]{cursor:default;pointer-events:none;border-color:transparent!important;background:transparent!important}
+#res table.pt td{padding-top:5px;padding-bottom:5px}
+#res table.pt td:first-child,#res table.pt td.lb{text-align:left;padding-left:18px;padding-right:12px;min-width:210px}
+#res table.pt td.pc{width:90px;min-width:90px;padding-left:4px}
+#res table.pt td:nth-child(3){min-width:110px;padding-right:20px}
+#res table.pt td:nth-child(4){min-width:110px;padding-right:20px;padding-left:4px}
+#res table.pt td[colspan]{padding-right:20px}
+#res.noloc table.pt td:nth-child(3){padding-right:24px;width:100%}
+#res table.pt td.lb{width:1%;white-space:nowrap}
+#res table.pt tr.rsp td{padding:0;height:8px}
+#res .dti{padding:3px 4px}
+#pdfdoc{display:none}
+.pdx{font:11px/1.35 Arial,Helvetica,sans-serif;color:#1a1a1a;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.pdx .logo{font-size:28px;font-weight:700;letter-spacing:.5px;color:#111}.pdx .logo b{color:#e8762d}.pdx .logo small{display:block;font-size:9px;font-weight:400;color:#777;letter-spacing:1px}
+.pdx .pd-rule{border-top:2px solid #111;margin:8px 0 14px}
+.pdx .pd-ban{background:#111;border-left:6px solid #e8762d;color:#fff;padding:14px 20px;margin-bottom:16px}
+.pdx .pd-ban .eye{color:#e8762d;font-size:10px;font-weight:700;letter-spacing:1.5px}
+.pdx .pd-ban .tt{font-size:24px;font-weight:700;margin-top:4px}.pdx .pd-ban em{color:#e8762d;font-style:normal}
+.pdx .pd-h{background:#e8762d;color:#fff;font-weight:700;font-size:13px;padding:8px 12px;margin:14px 0 8px}
+.pdx table{width:100%;border-collapse:separate;border-spacing:4px 0;table-layout:fixed}
+.pdx .pd-kv{border-spacing:0}.pdx .pd-kv td{padding:4px 12px;font-size:12px;border:0}.pdx .pd-kv td:first-child{width:24%;color:#777}.pdx .pd-kv td:last-child{font-weight:700}
+.pdx .pd-t td{padding:8px 8px;text-align:right;border-bottom:1px solid #e4e4e4;vertical-align:middle}
+.pdx .pd-t td.l{width:27%;text-align:left;padding-left:6px}
+.pdx .pd-t th.m{background:#111;color:#fff;text-align:center;padding:10px 6px;font-weight:700}
+.pdx .pd-t tr{page-break-inside:avoid}
+.pdx .pc{color:#777;margin-right:4px}
+.pdx small{display:block;font-weight:400;font-size:9px;color:#777}.pdx small.lc{color:#e8762d}
+.pdx tr.b td{font-weight:700}
+.pdx tr.promo td{background:#111;color:#ff9a4a;font-weight:700;font-size:13px;padding-top:11px;padding-bottom:11px}.pdx tr.promo td .pc{color:#ffb980;font-size:12px}.pdx tr.promo td.l{color:#ff9a4a;font-size:13px}.pdx tr.promo small.lc{color:#ffb980}
+.pdx tr.fin td:not(.l){background:#e8762d;color:#fff;font-size:14px}.pdx tr.fin td.l{font-weight:700;font-size:12px;background:#fff}
+.pdx tr.fin s{display:block;font-size:10px;opacity:.85}.pdx tr.fin small.lc{color:#fff}
+.pdx tr.tot td:not(.l){color:#1a7a3c;font-weight:700}.pdx tr.tot small{color:#1a7a3c}
+.pdx .pd-val{margin-top:14px;padding:12px 16px;background:#fff4ec;border-left:5px solid #e8762d;font-size:13px;color:#111}.pdx .pd-val b{color:#e8762d;font-size:15px;margin-left:4px}
+.pdx .pd-foot{font-size:10px;color:#666;margin-top:14px}
+@media print{.wrap>*:not(#pdfdoc){display:none!important}#pdfdoc{display:block}}
+#cand{grid-template-columns:repeat(3,1fr)}
+#cand .w2{grid-column:span 2}
+@media (max-width:700px){#cand{grid-template-columns:1fr}#cand .w2{grid-column:auto}}
+#cw{max-width:660px;margin:0 auto;padding:6px 0 4px}
+#cw.wide{max-width:1040px}
+#cw.wide #res{flex:0 1 700px!important}
+@media print{#cw,#cw.wide{max-width:none}}
+#addp,#addd{margin-top:4px;color:var(--ac);border:1px dashed var(--ac);background:transparent;font-weight:700}
+#addp:hover,#addd:hover{background:var(--ac);color:#fff}
+.pw{position:relative}.pw input{text-align:left;padding-right:28px;-moz-appearance:textfield;appearance:textfield}.pw input::-webkit-outer-spin-button,.pw input::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}.pw span{position:absolute;left:34px;top:50%;transform:translateY(-50%);color:var(--mut);font-weight:700;pointer-events:none}
+.note{font-size:12px;color:var(--mut);margin:8px 0 0}
+.hint{font-size:12px;color:var(--mut);margin:0 0 10px}
+@media print{body{background:#fff;color:#000}.noprint{display:none!important}.card{border:0}.wrap{padding:0}input,select{border:0;border-bottom:1px dotted #888;background:none;color:#000;padding:2px 0;appearance:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top">
+    <div class="logo"><b>ES</b> DESIGN<small>ESCUELA SUPERIOR DE DISEÑO DE BARCELONA</small></div>
+    <div class="noprint"><select id="lang" style="width:auto"><option value="es">Español</option><option value="en">English</option></select> <button id="tgtt" data-i="tgTt">Tasas del día</button> <button id="copy" data-i="copy">Copiar resumen</button> <button class="p" id="print" data-i="pdf">Descargar PDF</button></div>
+  </div>
+
+  <div class="card"><h2 data-i="hCand">Información candidatura</h2><div class="body g" id="cand">
+    <div><label data-i="lNom">Nombre</label><input id="nom"></div>
+    <div class="w2"><label data-i="lProg">Programa</label><select id="prog"></select></div>
+    <div><label data-i="lConv">Convocatoria</label><select id="conv"></select></div>
+    <div><label data-i="lAse">Asesor de admisiones</label><select id="ase"></select></div>
+    <div><label data-i="lPvp">Valor oficial del programa (€)</label><select id="pvp"><option value="6400">6.400 €</option><option value="6800">6.800 €</option><option value="9300">9.300 €</option></select></div>
+  </div></div>
+
+  <div class="card noprint" id="cardtt" style="display:none"><h2 data-i="hTasas">Tasas del día por moneda</h2><div class="body">
+    <p class="hint" data-i="hintTasas">x</p>
+    <div id="tt"></div>
+  </div></div>
+
+  <div class="noprint" style="display:none;margin-bottom:10px"><button id="t1" class="p" data-i="t1">Propuesta</button> <button id="t3" data-i="t3">Valor oficial con tasa</button> <button id="t2" data-i="t2">Precio global en moneda local</button></div>
+  <div class="card" id="vprop"><h2 data-i="hCond">Condiciones económicas</h2><div class="body"><div id="cw">
+    <div class="noprint" style="margin-bottom:14px">
+      <div id="descs"></div>
+    </div>
+    <div id="payarea" style="display:flex;gap:16px;align-items:flex-start;flex-wrap:wrap">
+      <div id="res" style="flex:1 1 560px;min-width:0"></div>
+      <div id="fxbox" class="noprint" style="display:none;flex:0 1 290px;min-width:240px;border:1px solid var(--bd);border-radius:10px;padding:12px;background:var(--card)">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px"><b data-i="hFx">Cambio de moneda</b><button type="button" id="rmfx" data-i="rmFx">× Quitar</button></div>
+        <div style="display:grid;gap:10px">
+    <div><label data-i="lPais">País</label><select id="pais"></select></div>
+    <div><label data-i="lMon">Moneda local (se rellena con el país)</label><input id="mon" list="mons" value="MXN"><datalist id="mons"><option value="COP"><option value="MXN"><option value="PEN"><option value="USD"><option value="ARS"><option value="CLP"><option value="BOB"><option value="UYU"><option value="CRC"><option value="GTQ"><option value="DOP"><option value="BRL"><option value="HNL"><option value="NIO"><option value="PYG"><option value="EUR"></datalist></div>
+    <div><label data-i="lTasa">Tasa de cambio (1 € = X moneda local)</label><input id="tasa" type="number" step="any"></div>
+    <div><label data-i="lFtasa">Fecha de la tasa</label><input id="ftasa" type="date"></div>
+    <div><label data-i="lPvpLoc">Valor oficial con la tasa aplicada</label><input id="pvploc" readonly></div>
+        </div>
+      </div>
+    </div>
+    <button type="button" id="addp" class="noprint" data-i="addPay">+ Añadir forma de pago</button>
+    <p class="note"><span data-i="valid">Estas condiciones económicas tienen validez hasta: </span><input id="val" type="date" class="dti" style="width:auto;display:inline-block;padding:3px 6px"></p>
+    <p class="note" id="nota"></p>
+  </div></div></div>
+
+  <div class="card" id="vglob" style="display:none"><h2 data-i="hGlob">Precio global en moneda local</h2><div class="body sc"><table id="glob"></table>
+    <p class="note" id="gnota"></p></div></div>
+
+  <div class="card" id="vval" style="display:none"><h2 data-i="hVal">Valor oficial del programa con la tasa aplicada</h2><div class="body sc"><table id="vtab"></table>
+    <p class="note" id="vnota"></p></div></div>
+  <div id="pdfdoc" class="pdx"></div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<script>
+// ===== DATOS EDITABLES (sustituir por el listado real) =====
+var DATA={
+  programas:[
+    {n:"MFP en Diseño Gráfico Digital",pvp:6400,c:"Abril 2027"},
+    {n:"MFP en Diseño Editorial y Publicaciones Digitales",pvp:6400,c:"Abril 2027"},
+    {n:"MFP en Ilustración y Animación",pvp:6400,c:"Abril 2027"},
+    {n:"MFP en Diseño de Interiores",pvp:6400,c:"Abril 2027"},
+    {n:"MFP en Decoración de Interiores",pvp:6400,c:"Abril 2027"},
+    {n:"Doble MFP en Diseño y Decoración de Interiores",pvp:9300,c:"Abril 2027"},
+    {n:"MFP en Retail Design & Visual Merchandising",pvp:6400,c:"Abril 2027"},
+    {n:"MFP en Paisajismo y Urbanismo Sostenible",pvp:6400,c:"Abril 2027"},
+    {n:"MFP en Branding, Creatividad y Comunicación de Marca",pvp:6400,c:"Abril 2027"},
+    {n:"MFP en Diseño y Dirección de Arte",pvp:6400,c:"Abril 2027"},
+    {n:"MFP en Dirección y Creación de Marcas de Moda",pvp:6400,c:"Abril 2027"},
+    {n:"MFP en Inteligencia Artificial aplicada a la creatividad y al Diseño",pvp:6400,c:"Abril 2027"},
+    {n:"MFP en Diseño de Producto y Modelado Digital",pvp:6400,c:"Octubre 2027"},
+    {n:"MFP en Diseño Web Multidispositivo: UX/UI",pvp:6400,c:"Abril 2027"},
+    {n:"Master in Branding and Creative Brand Communication",pvp:6800,c:"Octubre 2027",l:"en"}
+  ],
+  asesores:["Agustina López", "Andrea Hidalgo", "Andrea Ruiz", "Armand Sevilla", "Belén Sosa", "Claudio Mejía", "Cynthia Cruela", "Eliana Copete", "Estefhany Florez", "Esther Prim", "Francia Rivillas", "Jhonatan Gómez", "Jhonnatan de Freitas", "Jordi Mestres", "José González", "Karinna Castañeda", "Loreto Olivares", "Manuel Ruzza", "María Pía Zapata", "Mariana Sanhueza", "Micaela Lopez", "Natalia López", "Nathan Bensalem", "Priscila Mansilla", "Rosario Gomez", "Rosario Priegue", "Silvia Grijalvo", "Sofia Santini", "Yeribel Sandoval"],
+  convocatorias:["Abril 2027","Octubre 2027","Octubre 2026"]
+};
+var $=function(i){return document.getElementById(i)};
+var DESCP=[30,0,0];
+var PAGOSN=[[10,100,0],[10,20,1],[5,20,1],[0,20,12]];
+var I18N={
+es:{rMod:"Modalidad de pago",rEuro:"Euro",rLocal:"Moneda local",rRestA:"Resto a abonar",rRestB:"(cuotas sin intereses)",rFi:"Fecha abono inscripción",rFa:"Fecha abono cuota",rFrom:"Desde:",lFi:"Fecha abono inscripción",lFa:"Fecha abono (desde)",pct:"Porcentaje",discL:"Tipo de descuento",chooseD:"— Elegir descuento —",addDisc:"+ Añadir descuento",copy:"Copiar resumen",copied:"Copiado ✓",pdf:"Descargar PDF",hCand:"Información candidatura",lNom:"Nombre",lProg:"Programa",lConv:"Convocatoria",lAse:"Asesor de admisiones",lPvp:"Valor oficial del programa (€)",lPvpLoc:"Valor oficial con la tasa aplicada",lPais:"País",lMon:"Moneda local (se rellena con el país)",lTasa:"Tasa de cambio (1 € = X moneda local)",lFtasa:"Fecha de la tasa",lVal:"Condiciones válidas hasta",hDesc:"Descuentos (hasta 3, en cascada)",hintDesc:"El Descuento Fecha Matrícula va siempre. Con + puedes añadir hasta 2 descuentos más, a elegir entre Cierre Convocatoria, Apertura Convocatoria y Referido (5 %) y ESDESIGNER (10 %). Se aplican en cascada sobre el importe que queda tras los anteriores, y el porcentaje se puede editar. Debajo, con + añades formas de pago (hasta 4); cada una se configura por separado. Con × se quita el descuento añadido.",hPagos:"Formas de pago (4)",hintPagos:"El descuento de forma de pago se aplica sobre el precio tras los descuentos anteriores. Cuotas = 0 si no hay resto a financiar.",hTasas:"Tasas del día por moneda",hintTasas:"Al elegir la moneda se rellenan la tasa y su fecha con lo que pongas aquí (1 € = X moneda local). Se guarda en este navegador. Precargadas: USD, MXN y BRL del BCE (20/11/2026); NIO, HNL y UYU de Google Finance (20/11/2026); COP, CLP y PYG de otra fuente (20/11/2026); GTQ, DOP y CRC sin fecha confirmada (revisar). PEN vacía.",t1:"Propuesta",t3:"Valor oficial con tasa",t2:"Precio global en moneda local",hCond:"Condiciones económicas",hGlob:"Precio global en moneda local",hVal:"Valor oficial del programa con la tasa aplicada",
+name:"Nombre",rate:"Tasa",pay:"Forma de pago",pdisc:"Descuento",pins:"Inscripción",pn:"Nº cuotas",
+d1:"Descuento Black Friday",d2:"Descuento 2",d3:"Descuento 3",d4:"Descuento 4",pdPay:"Descuento por forma de pago",pdTot:"Total de descuentos aplicados",pdOf:"del valor oficial",bfEye:"SEMANA BLACK FRIDAY · 23–30 NOVIEMBRE",bfT:"Descuento Black Friday del",pdfBusy:"Generando PDF…",tgTt:"Tasas del día",addPay:"+ Añadir forma de pago",fxOn:"+ Moneda local",fxOff:"− Moneda local",hFx:"Cambio de moneda",rmFx:"× Quitar",p1:"Contado",p2:"Contado en días",p3:"Contado aplazado",p4:"Cuotas",
+rOff:"Valor oficial del programa",rPay:"Forma de pago",rFinal:"Valor final del programa",rIns:"Importe de inscripción",rRest:"Resto a abonar (cuotas sin intereses)",rInst:"Nº de cuotas · importe",rDisc:"Descuentos totales (en cascada)",rNet:"Precio tras descuentos",rFin2:"precio final",rOff2:"Valor oficial",rSel:"seleccionado",eur:"Euros",
+valid:"Estas condiciones económicas tienen validez hasta: ",refr:"Únicamente a efectos de referencia para el candidato, se ha aplicado la siguiente tasa cambiaria: ",asof:"tasa a fecha ",indic:"El importe en moneda local es orientativo y puede variar según el tipo de cambio en el momento del pago.",
+sTitle:"PROPUESTA ECONÓMICA · ESDESIGN",sCand:"Candidato",sProg:"Programa",sAse:"Asesor",sOff:"Valor oficial",sFinal:"final",sIns:"inscripción",sInst:"cuotas de",sValid:"Válido hasta",other:"Otro país (escribir moneda)"},
+en:{rMod:"Payment plan",rEuro:"Euro",rLocal:"Local currency",rRestA:"Remaining balance",rRestB:"(interest-free instalments)",rFi:"Enrolment fee payment date",rFa:"Instalment payment date",rFrom:"From:",lFi:"Enrolment fee payment date",lFa:"Payment date (from)",pct:"Percentage",discL:"Discount type",chooseD:"— Choose discount —",addDisc:"+ Add discount",copy:"Copy summary",copied:"Copied ✓",pdf:"Download PDF",hCand:"Candidate information",lNom:"Name",lProg:"Programme",lConv:"Intake",lAse:"Admissions advisor",lPvp:"Official programme price (€)",lPvpLoc:"Official price at the applied rate",lPais:"Country",lMon:"Local currency (filled in from the country)",lTasa:"Exchange rate (1 € = X local currency)",lFtasa:"Rate date",lVal:"Conditions valid until",hDesc:"Discounts (up to 3, cascading)",hintDesc:"The Enrolment Date Discount is always included. Use + to add up to 2 more discounts, chosen from Intake Closing, Intake Opening and Referral (5 %) and ESDESIGNER (10 %). They are applied in cascade on the amount left after the previous ones, and the percentage can be edited. Below, use + to add payment plans (up to 4); each one is configured separately. Use × to remove an added discount.",hPagos:"Payment methods (4)",hintPagos:"The payment-method discount is applied to the price after the previous discounts. Instalments = 0 if there is no balance to finance.",hTasas:"Daily rates by currency",hintTasas:"When you choose the currency, the rate and its date are filled in from what you enter here (1 € = X local currency). Saved in this browser. Preloaded: USD, MXN and BRL from the ECB (20/11/2026); NIO, HNL and UYU from Google Finance (20/11/2026); COP, CLP and PYG from another source (20/11/2026); GTQ, DOP and CRC without a confirmed date (to check). PEN empty.",t1:"Proposal",t3:"Official price with rate",t2:"Total price in local currency",hCond:"Financial conditions",hGlob:"Total price in local currency",hVal:"Official programme price at the applied rate",
+name:"Name",rate:"Rate",pay:"Payment method",pdisc:"Discount",pins:"Enrolment fee",pn:"No. of instalments",
+d1:"Black Friday Discount",d2:"Discount 2",d3:"Discount 3",d4:"Discount 4",pdPay:"Payment-method discount",pdTot:"Total discounts applied",pdOf:"of the official price",bfEye:"BLACK FRIDAY WEEK · 23–30 NOVEMBER",bfT:"Black Friday discount of",pdfBusy:"Generating PDF…",tgTt:"Daily rates",addPay:"+ Add payment plan",fxOn:"+ Local currency",fxOff:"− Local currency",hFx:"Currency conversion",rmFx:"× Remove",p1:"Single payment",p2:"Single payment within days",p3:"Deferred single payment",p4:"Instalments",
+rOff:"Official programme price",rPay:"Payment method",rFinal:"Final programme price",rIns:"Enrolment fee",rRest:"Remaining balance (interest-free instalments)",rInst:"Instalments · amount",rDisc:"Total discounts (cascading)",rNet:"Price after discounts",rFin2:"final price",rOff2:"Official price",rSel:"selected",eur:"Euros",
+valid:"These financial conditions are valid until: ",refr:"For the candidate's reference only, the following exchange rate has been applied: ",asof:"rate as of ",indic:"The amount in local currency is indicative and may vary depending on the exchange rate at the time of payment.",
+sTitle:"FINANCIAL PROPOSAL · ESDESIGN",sCand:"Candidate",sProg:"Programme",sAse:"Advisor",sOff:"Official price",sFinal:"final",sIns:"enrolment fee",sInst:"instalments of",sValid:"Valid until",other:"Other country (type currency)"}
+};
+var LANG="es";
+function T(k){return I18N[LANG][k]}
+var MESES={es:{Abril:"Abril",Octubre:"Octubre"},en:{Abril:"April",Octubre:"October"}};
+function convTxt(c){var q=c.split(" ");return (MESES[LANG][q[0]]||q[0])+" "+q.slice(1).join(" ")}
+var nf,nf0;
+function mkNf(l){var loc=l=="en"?"en-US":"es-ES";nf=new Intl.NumberFormat(loc,{minimumFractionDigits:2,maximumFractionDigits:2,useGrouping:"always"});nf0=new Intl.NumberFormat(loc,{maximumFractionDigits:0,useGrouping:"always"})}
+mkNf("es");
+var e=function(v){return nf.format(v)+" €"};
+function opts(el,arr){el.innerHTML=arr.map(function(a){return "<option>"+a+"</option>"}).join("")}
+opts($("prog"),DATA.programas.map(function(p){return p.n}));opts($("ase"),DATA.asesores);
+$("conv").innerHTML=DATA.convocatorias.map(function(c){return '<option value="'+c+'">'+c+'</option>'}).join("");
+function setPvp(){var p=DATA.programas[$("prog").selectedIndex],o=$("pvp").options;if(p){for(var i=0;i<o.length;i++)if(parseFloat(o[i].value)==p.pvp)$("pvp").value=o[i].value;if(p.c)$("conv").value=p.c}}
+setPvp();
+$("descs").innerHTML=DESCP.map(function(d,i){return '<div class="row d" id="drow'+i+'"'+(i>0?' style="display:none;grid-template-columns:minmax(0,1fr) 150px 44px"':' style="grid-template-columns:minmax(0,1fr) 150px 44px"')+'>'+(i>0?'<div><label data-i="discL">Tipo de descuento</label><select id="dn'+i+'"></select></div>':'<div><label data-i="name">Nombre</label><input id="dn'+i+'" value=""></div>')+'<div><label data-i="pct">Porcentaje</label><div class="pw"><input id="dp'+i+'" type="number" step="0.01" value="'+d+'"><span>%</span></div></div>'+(i>0?'<div><button type="button" style="width:100%;padding:8px 0" data-k="'+i+'">×</button></div>':'<div></div>')+'</div>'}).join("")+'<button type="button" id="addd" data-i="addDisc">+ Añadir descuento</button>';
+buildRes();
+
+function buildRes(){
+  var pw=function(id,val){return '<div class="pw"><input id="'+id+'" type="number" step="0.01" value="'+val+'"><span>%</span></div>'};
+  var out="";
+  for(var j=0;j<4;j++){
+    var ids=function(k){return 'c_'+k+'_'+j+'_'};
+    var row=function(key,label,lc,cc,c0){return '<tr id="r_'+key+'_'+j+'"><td class="lb '+lc+'">'+label+'</td><td class="pc '+cc+'" id="'+ids(key)+'0">'+c0+'</td><td class="'+cc+'" id="'+ids(key)+'1"></td><td class="loc '+cc+'" id="'+ids(key)+'2"></td></tr>'};
+    var SP='<tr class="rsp"><td colspan="4"></td></tr>';
+    var opts=[0,1,2,3].map(function(k){return '<option value="'+k+'"'+(k==j?' selected':'')+'>'+I18N[LANG]["p"+(k+1)]+'</option>'}).join("");
+    var t='<tr><td class="lb"></td><td></td><td><i><b data-i="rEuro">Euro</b></i></td><td class="loc"><i id="rlocl'+j+'"></i></td></tr>';
+    t+=row("off",'<span data-i="rOff">Valor oficial del programa</span>',"","","");
+    for(var i=0;i<3;i++)t+=row("d"+i,'<span id="dl'+i+'_'+j+'"></span>',"","",pw("dx"+i+"_"+j,DESCP[i]));
+    t+=row("pay",'<span data-i="rPay">Forma de pago</span>',"","",pw("pd"+j,PAGOSN[j][0]));
+    t+=SP+row("fin",'<span data-i="rFinal">Valor final del programa</span>',"dk","dk","");
+    t+=SP+row("ins",'<span data-i="rIns">Importe de inscripción</span>',"gy","gy",pw("pi"+j,PAGOSN[j][1]));
+    t+='<tr class="gyr"><td class="lb gy"><span data-i="rFi">Fecha abono inscripción</span></td><td class="gy" colspan="3"><input id="fi'+j+'" type="date" class="dti"></td></tr>'+'<tr class="rsp" id="r_sp_'+j+'"><td colspan="4"></td></tr>';
+    t+=row("rA",'<span data-i="rRestA">Resto a abonar</span>',"gy","gy","");
+    t+=row("rB",'<span data-i="rRestB">(cuotas sin intereses)</span>',"gy","gy",'<input id="pc'+j+'" type="number" step="1" value="'+PAGOSN[j][2]+'">');
+    t+='<tr id="r_fa_'+j+'"><td class="lb gy"><span data-i="rFa">Fecha abono</span></td><td class="gy" colspan="3"><span id="from'+j+'" data-i="rFrom">Desde:</span> <input id="fa'+j+'" type="date" class="dti"></td></tr>';
+    out+='<div class="pblk" id="pb'+j+'"'+(j>0?' style="display:none"':'')+'><div class="ph"><select id="pn'+j+'">'+opts+'</select><button type="button" class="noprint fxt" data-fx="1"></button>'+(j>0?'<button type="button" class="noprint" data-kp="'+j+'">×</button>':'')+'</div><table class="pt">'+t+'</table></div>';
+  }
+  $("res").innerHTML=out;
+}
+var last="";
+var DESCO=[["Cierre Convocatoria","Intake Closing",5],["Apertura Convocatoria","Intake Opening",5],["Referido","Referral",5],["ESDESIGNER","ESDESIGNER",10]];
+function dnm(i){var el=$("dn"+i);if(el.tagName=="SELECT")return el.selectedOptions&&el.selectedOptions[0]&&el.value?el.selectedOptions[0].text:"";return el.value}
+function v(id){return parseFloat($(id).value)||0}
+function calc(){
+  var pvp=v("pvp"),t=v("tasa"),mon=$("mon").value||"Local";
+  var cur=pvp,drows=[];
+  [0,1,2].forEach(function(i){var a=cur*v("dp"+i)/100;cur-=a;drows.push([dnm(i),v("dp"+i),a])});
+  var neto=cur,cols=[];
+  for(var j=0;j<4;j++){
+    var pd=neto*v("pd"+j)/100,fin=neto-pd,ins=fin*v("pi"+j)/100,resto=fin-ins,n=Math.round(v("pc"+j)),cu=n>0?Math.round(resto/n*100)/100:0;
+    cols.push({fi:$("fi"+j).value,fa:$("fa"+j).value,act:$("pb"+j).style.display!="none",ty:$("pn"+j).value,nom:$("pn"+j).selectedOptions[0].text,pp:v("pd"+j),pd:pd,fin:fin,ip:v("pi"+j),ins:ins,resto:resto,n:n,cu:cu});
+  }
+  var fxOn=$("fxbox").style.display!="none",sl=fxOn&&t>0&&mon.toUpperCase()!="EUR";
+  $("t2").style.display=$("t3").style.display=fxOn?"":"none";
+  var fb=document.querySelectorAll(".fxt");for(var q0=0;q0<fb.length;q0++)fb[q0].textContent=T(fxOn?"fxOff":"fxOn");
+  $("pvploc").value=sl?nf.format(pvp*t)+" "+mon:"—";
+  var E=function(x){return nf.format(x)+" €"},L=function(x){return nf.format(x*t)};
+  function SET(k,j,x,html){var el=$("c_"+k+"_"+j+"_"+x);if(el)el.innerHTML=html}
+  $("res").className=sl?"":"noloc";
+  for(var j4=0;j4<4;j4++){var c=cols[j4];if(!c.act)continue;
+    $("rlocl"+j4).textContent=T("rLocal")+" ("+mon+")";
+    SET("off",j4,1,"<b>"+E(pvp)+"</b>");SET("off",j4,2,"<b>"+L(pvp)+"</b>");
+    for(var di=0;di<3;di++){var dd=drows[di],on=dd[1]>0;$("r_d"+di+"_"+j4).style.display=on?"":"none";
+      if(on){$("dl"+di+"_"+j4).textContent=dd[0];var dxi=$("dx"+di+"_"+j4);if(document.activeElement!==dxi)dxi.value=dd[1];SET("d"+di,j4,1,E(dd[2]));SET("d"+di,j4,2,L(dd[2]))}}
+    SET("pay",j4,1,c.pp>0?E(c.pd):"");SET("pay",j4,2,c.pp>0?L(c.pd):"");
+    SET("fin",j4,1,"<b>"+E(c.fin)+"</b>");SET("fin",j4,2,"<b>"+L(c.fin)+"</b>");
+    SET("ins",j4,1,"<b>"+E(c.ins)+"</b>");SET("ins",j4,2,"<b>"+L(c.ins)+"</b>");
+    var hr=c.resto>0.005;
+    SET("rA",j4,1,hr?E(c.resto):"—");SET("rA",j4,2,hr?L(c.resto):"");
+    SET("rB",j4,1,c.n>=1&&hr?"<b>"+E(c.cu)+"</b>":"");SET("rB",j4,2,c.n>=1&&hr?"<b>"+L(c.cu)+"</b>":"");
+    $("from"+j4).style.visibility=c.n>1&&hr?"visible":"hidden";
+    $("fi"+j4).classList.toggle("empty",!c.fi);$("fa"+j4).classList.toggle("empty",!c.fa);
+  }
+  function gr(l,x,cls){return '<tr class="'+(cls||"")+'"><td>'+l+'</td><td><b>'+e(x)+'</b></td><td><b>'+(sl?nf.format(x*t)+" "+mon:"—")+'</b></td></tr>'}
+  var g="<tr><th></th><th>"+T("eur")+"</th><th>"+mon+"</th></tr>"+gr(T("rOff"),pvp);
+  if(pvp-neto>0.005)g+=gr(T("rDisc"),pvp-neto);
+  g+=gr(T("rNet"),neto,"fin");
+  cols.filter(function(c){return c.act}).forEach(function(c){g+=gr(c.nom+" · "+T("rFin2"),c.fin,"ins")});
+  $("glob").innerHTML=g;
+  var vt="<tr><th>"+T("rOff2")+"</th><th>"+T("eur")+"</th><th>"+mon+"</th></tr>",po=$("pvp").options;
+  for(var q=0;q<po.length;q++){var xv=parseFloat(po[q].value),sel=po[q].selected;vt+=gr(T("rOff")+(sel?" ("+T("rSel")+")":""),xv,sel?"fin":"")}
+  $("vtab").innerHTML=vt;
+  var vd=$("val").value?$("val").value.split("-").reverse().join("/"):"—";
+  var fxn=sl?T("refr")+"<b>1 € = "+nf.format(t)+" "+mon+"</b>"+($("ftasa").value?" ("+T("asof")+$("ftasa").value.split("-").reverse().join("/")+")":"")+". "+T("indic"):"";
+  $("nota").innerHTML=fxn;$("val").classList.toggle("empty",!$("val").value);if($("val").value)$("val").style.outline="";
+  var vn=T("valid")+"<b>"+vd+"</b>."+(fxn?"<br>"+fxn:"");$("gnota").innerHTML=vn;$("vnota").innerHTML=vn;
+  var cv=$("conv").selectedOptions&&$("conv").selectedOptions[0]?$("conv").selectedOptions[0].text:$("conv").value;
+  last=T("sTitle")+"\n"+T("sCand")+": "+($("nom").value||"—")+"\n"+T("sProg")+": "+$("prog").value+" · "+cv+"\n"+T("sAse")+": "+$("ase").value+"\n\n"+T("sOff")+": "+e(pvp)+"\n"+drows.filter(function(d){return d[1]>0}).map(function(d){return d[0]+": −"+e(d[2])}).join("\n")+"\n\n"+cols.filter(function(c){return c.act}).map(function(c){return c.nom+": "+T("sFinal")+" "+e(c.fin)+" · "+T("sIns")+" "+e(c.ins)+(c.n>0&&c.resto>0.005?" + "+c.n+" "+T("sInst")+" "+e(c.cu):"")}).join("\n")+"\n\n"+T("sValid")+": "+vd;pctPos();buildPdf(cols,drows,pvp,sl,t,mon,vd,fxn);
+}
+function buildPdf(cols,drows,pvp,sl,t,mon,vd,fxn){
+  var A=cols.filter(function(c){return c.act});
+  var D=function(x){return x?x.split("-").reverse().join("/"):""};
+  var E=function(x){return nf.format(x)+" €"};
+  var pc=function(x){return (Math.round(x*100)/100).toString().replace(".",LANG=="en"?".":",")+" %"};
+  var lc=function(x){return sl?'<small class="lc">'+nf.format(x)+" "+mon+"</small>":""};
+  var am=function(x,b){return (b?"<b>":"")+E(x)+(b?"</b>":"")+lc(x*t)};
+  var row=function(label,fn,cls){return '<tr class="'+(cls||"")+'"><td class="l">'+label+"</td>"+A.map(function(c){return "<td>"+fn(c)+"</td>"}).join("")+"</tr>"};
+  var bf=/black\s*friday/i.test(drows[0][0])&&drows[0][1]>0;
+  var cv=$("conv").selectedOptions&&$("conv").selectedOptions[0]?$("conv").selectedOptions[0].text:$("conv").value;
+  var h='<div class="logo"><b>ES</b> DESIGN<small>ESCUELA SUPERIOR DE DISEÑO DE BARCELONA</small></div><div class="pd-rule"></div>';
+  if(bf)h+='<div class="pd-ban"><div class="eye">'+T("bfEye")+'</div><div class="tt">'+T("bfT")+" <em>"+pc(drows[0][1])+"</em></div></div>";
+  h+='<div class="pd-h">'+T("hCand")+'</div><table class="pd-kv">'+
+    [[T("lNom"),$("nom").value||"—"],[T("lProg"),$("prog").value],[T("lConv"),cv],[T("lAse"),$("ase").value]].map(function(r){return "<tr><td>"+r[0]+"</td><td>"+r[1]+"</td></tr>"}).join("")+"</table>";
+  h+='<div class="pd-h">'+T("hCond")+'</div><table class="pd-t"><tr><td class="l mod">'+T("rMod")+"</td>"+A.map(function(c){return '<th class="m">'+c.nom+"</th>"}).join("")+"</tr>";
+  h+=row(T("rOff"),function(){return am(pvp,true)},"b");
+  drows.forEach(function(d,i){if(d[1]>0)h+=row(d[0],function(){return '<span class="pc">'+pc(d[1])+"</span> −"+E(d[2])+lc(d[2]*t)},(i==0&&bf)?"promo":"")});
+  if(A.some(function(c){return c.pp>0}))h+=row(T("pdPay"),function(c){return c.pp>0?'<span class="pc">'+pc(c.pp)+"</span> −"+E(c.pd)+lc(c.pd*t):"—"});
+  h+=row(T("rFinal"),function(c){return "<s>"+E(pvp)+"</s><b>"+E(c.fin)+"</b>"+lc(c.fin*t)},"fin");
+  h+=row(T("pdTot"),function(c){var x=pvp-c.fin;return "−"+E(x)+"<small>"+pc(pvp>0?x/pvp*100:0)+" "+T("pdOf")+"</small>"},"tot");
+  h+=row(T("rIns"),function(c){return '<span class="pc">'+pc(c.ip)+"</span> "+am(c.ins,true)});
+  if(A.some(function(c){return c.fi}))h+=row(T("rFi"),function(c){return D(c.fi)||"—"});
+  var hasR=function(c){return c.ty!="0"&&c.resto>0.005};
+  if(A.some(hasR)){
+    h+=row(T("rRestA"),function(c){return hasR(c)?am(c.resto,true):"—"});
+    h+=row(T("rRestB"),function(c){return hasR(c)&&c.n>=1?(c.n>1?c.n+" × ":"")+am(c.cu,true):"—"});
+    if(A.some(function(c){return hasR(c)&&c.fa}))h+=row(T("rFa"),function(c){return hasR(c)&&c.fa?(c.n>1?T("rFrom")+" ":"")+D(c.fa):"—"});
+  }
+  h+="</table>";
+  h+='<div class="pd-val">'+T("valid")+"<b>"+(vd!="—"?vd:"__ / __ / ____")+"</b></div>";
+  if(fxn)h+='<div class="pd-foot">'+fxn+"</div>";
+  $("pdfdoc").innerHTML=h;
+}
+function pctPos(){var cv=pctPos.c||(pctPos.c=document.createElement("canvas").getContext("2d"));var ins=document.querySelectorAll(".pw input");for(var i=0;i<ins.length;i++){var el=ins[i],cs=getComputedStyle(el);cv.font=cs.fontStyle+" "+cs.fontWeight+" "+cs.fontSize+" "+cs.fontFamily;var w=cv.measureText(el.value||"").width;var sp=el.nextElementSibling;if(sp)sp.style.left=(parseFloat(cs.paddingLeft)+w+4)+"px"}}
+function isDef(val,key){return !val||val==I18N.es[key]||val==I18N.en[key]}
+function applyLang(l){
+  LANG=l;$("lang").value=l;document.documentElement.lang=l;mkNf(l);
+  var els=document.querySelectorAll("[data-i]");for(var i=0;i<els.length;i++)els[i].textContent=T(els[i].getAttribute("data-i"));
+  var ph=document.querySelectorAll("[data-ph]");for(var i2=0;i2<ph.length;i2++)ph[i2].placeholder=T("rate");
+  var po=$("pvp").options;for(var k=0;k<po.length;k++)po[k].text=nf0.format(parseFloat(po[k].value))+" €";
+  var co=$("conv").options;for(var c=0;c<co.length;c++)co[c].text=convTxt(co[c].value);
+  var pi=$("pais").value||"4";$("pais").innerHTML=PAISES.map(function(p,x){return '<option value="'+x+'">'+(p[0]===""?"":"")+(p[2]?(l=="en"?p[1]:p[0]):T("other"))+'</option>'}).join("");$("pais").value=pi;
+  for(var d=0;d<4;d++){if(d==0){if(isDef($("dn0").value,"d1"))$("dn0").value=T("d1")}else if(d<3){var sl2=$("dn"+d),cu2=sl2.value;sl2.innerHTML='<option value="">'+T("chooseD")+'</option>'+DESCO.map(function(o){return '<option value="'+o[0]+'">'+(LANG=="en"?o[1]:o[0])+'</option>'}).join("");sl2.value=cu2}var po2=$("pn"+d).options;for(var k2=0;k2<4;k2++)po2[k2].text=T("p"+(k2+1))}
+  calc();
+}
+document.addEventListener("input",calc);
+$("prog").addEventListener("change",function(){setPvp();var p=DATA.programas[$("prog").selectedIndex];applyLang(p&&p.l?p.l:"es")});
+$("lang").addEventListener("change",function(){applyLang($("lang").value)});
+$("descs").addEventListener("change",function(ev){var el=ev.target;if(el.tagName!="SELECT")return;var i=el.id.slice(2);var o=DESCO.filter(function(x){return x[0]==el.value})[0];$("dp"+i).value=o?o[2]:0;calc()});
+function updAdd(){var any=false;for(var i=1;i<3;i++)if($("drow"+i).style.display=="none")any=true;$("addd").style.display=any?"":"none"}
+$("addd").onclick=function(){var q=[1,2];for(var n=0;n<2;n++){var i=q[n];if($("drow"+i).style.display=="none"){$("drow"+i).style.display="";break}}updAdd()};
+$("descs").addEventListener("click",function(ev){var k=ev.target.getAttribute&&ev.target.getAttribute("data-k");if(!k)return;$("drow"+k).style.display="none";$("dp"+k).value=0;$("dn"+k).value="";updAdd();calc()});
+function lockPay(j){var ty=$("pn"+j).value,c=ty=="0";if(ty=="3")$("pd"+j).value=0;$("r_pay_"+j).style.display=ty=="3"?"none":"";["rA","rB","fa","sp"].forEach(function(k){$("r_"+k+"_"+j).style.display=c?"none":""});if(c){$("pi"+j).value=100;$("pc"+j).value=0}$("pi"+j).readOnly=c;if(ty=="1")$("pc"+j).value=1;$("pc"+j).readOnly=c||ty=="1"}
+for(var j9=0;j9<4;j9++)lockPay(j9);
+function updP(){var any=false;for(var i=1;i<4;i++)if($("pb"+i).style.display=="none")any=true;$("addp").style.display=any?"":"none"}
+$("addp").onclick=function(){for(var i=1;i<4;i++){if($("pb"+i).style.display=="none"){$("pb"+i).style.display="";break}}updP();calc()};
+$("res").addEventListener("click",function(ev){var fx=ev.target.getAttribute&&ev.target.getAttribute("data-fx");if(fx){setFx($("fxbox").style.display=="none");return}var k=ev.target.getAttribute&&ev.target.getAttribute("data-kp");if(!k)return;$("pb"+k).style.display="none";updP();calc()});
+$("res").addEventListener("change",function(ev){var el=ev.target;if(el.tagName!="SELECT")return;var j=el.id.slice(2),pr=PAGOSN[parseInt(el.value)];$("pd"+j).value=pr[0];$("pi"+j).value=pr[1];$("pc"+j).value=pr[2];lockPay(j);calc()});
+function setFx(on){$("cw").classList.toggle("wide",on);$("fxbox").style.display=on?"":"none";if(on&&!v("tasa"))fill();if(!on&&$("vprop").style.display=="none")tab(1);calc()}
+$("rmfx").onclick=function(){setFx(false)};
+$("tgtt").onclick=function(){var c=$("cardtt");c.style.display=c.style.display=="none"?"":"none"};
+$("res").addEventListener("input",function(ev){var m=/^dx(\d)_/.exec(ev.target.id||"");if(m)$("dp"+m[1]).value=ev.target.value});
+function pdfName(){var n=($("nom").value||"").replace(/[\\\/:*?"<>|]+/g," ").trim();return "Propuesta ESDESIGN"+(n?" - "+n:"")+".pdf"}
+$("print").onclick=async function(){
+  var b=$("print");
+  if(!$("val").value){$("val").style.outline="2px solid #d33";$("val").scrollIntoView({block:"center"})}
+  if(!window.html2pdf){window.print();return}
+  var dl=null;try{if(typeof claude!="undefined"&&claude.use)dl=await claude.use("downloads")}catch(x){}
+  b.disabled=true;b.textContent=T("pdfBusy");
+  try{
+    var w=window.html2pdf().set({margin:0,filename:pdfName(),image:{type:"jpeg",quality:.98},html2canvas:{scale:2,backgroundColor:"#ffffff"},jsPDF:{unit:"mm",format:"a4",orientation:"portrait"},pagebreak:{mode:["css","legacy"],avoid:"tr"}}).from('<div class="pdx" style="padding:36px;background:#fff">'+$("pdfdoc").innerHTML+"</div>","string");
+    if(dl){var blob=await w.outputPdf("blob");await dl.save({filename:pdfName(),data:blob})}
+    else await w.save();
+  }catch(x){if(!(x&&x.code=="declined"))window.print()}
+  b.disabled=false;b.textContent=T("pdf");
+};
+$("copy").onclick=function(){var b=$("copy");function ok(){b.textContent=T("copied");setTimeout(function(){b.textContent=T("copy")},1500)}
+  try{navigator.clipboard.writeText(last).then(ok,function(){})}catch(x){}};
+// Tasas por moneda: r = unidades de moneda local por 1 €; f = fecha AAAA-MM-DD
+var TASAS={};"COP MXN PEN USD ARS CLP BOB UYU CRC GTQ DOP BRL HNL NIO PYG".split(" ").forEach(function(k){TASAS[k]={r:0,f:""}});
+var DEF={USD:[1.099,"2026-11-20"],MXN:[20.9547,"2026-11-20"],BRL:[6.5259,"2026-11-20"],COP:[3690.09,"2026-11-20"],CLP:[1112.48,"2026-11-20"],PYG:[6914.96,"2026-11-20"],GTQ:[8.578,""],HNL:[29.455,"2026-11-20"],DOP:[68.82,""],UYU:[44.5335,"2026-11-20"],CRC:[487.6,""],NIO:[40.33,"2026-11-20"]};
+for(var d in DEF)TASAS[d]={r:DEF[d][0],f:DEF[d][1]};
+try{var sv=JSON.parse(localStorage.getItem("tasasESD")||"null");if(sv)for(var k in sv)if(TASAS[k]&&sv[k]&&sv[k].r>0)TASAS[k]=sv[k]}catch(x){}
+var PAISES=[["España","Spain","EUR"],["Chile","Chile","CLP"],["Colombia","Colombia","COP"],["Ecuador","Ecuador","USD"],["México","Mexico","MXN"],["Perú","Peru","PEN"],["Costa Rica","Costa Rica","CRC"],["Guatemala","Guatemala","GTQ"],["Honduras","Honduras","HNL"],["Panamá","Panama","USD"],["Puerto Rico","Puerto Rico","USD"],["República Dominicana","Dominican Republic","DOP"],["Uruguay","Uruguay","UYU"],["El Salvador","El Salvador","USD"],["Nicaragua","Nicaragua","NIO"],["Paraguay","Paraguay","PYG"],["Otro país (escribir moneda)","Other country","" ]];
+$("pais").innerHTML=PAISES.map(function(p,i){return '<option value="'+i+'">'+p[0]+'</option>'}).join("");
+$("pais").value="4";
+$("pais").addEventListener("change",function(){var p=PAISES[$("pais").value];if(p[2]){$("mon").value=p[2];fill()}});
+$("tt").innerHTML=Object.keys(TASAS).map(function(k){var t=TASAS[k];return '<div class="row" style="grid-template-columns:60px 1fr 1fr"><div><b>'+k+'</b></div><input id="tr_'+k+'" type="number" step="any" data-ph="1" placeholder="Tasa" value="'+(t.r||"")+'"><input id="tf_'+k+'" type="date" value="'+(t.f||"")+'"></div>'}).join("");
+function cod(){return ($("mon").value||"").toUpperCase().trim()}
+function fill(){var t=TASAS[cod()];$("tasa").value=t&&t.r>0?t.r:"";$("ftasa").value=t&&t.r>0?t.f:"";calc()}
+$("mon").addEventListener("input",fill);
+$("tt").addEventListener("input",function(ev){var k=ev.target.id.slice(3);if(!TASAS[k])return;TASAS[k]={r:parseFloat($("tr_"+k).value)||0,f:$("tf_"+k).value};try{localStorage.setItem("tasasESD",JSON.stringify(TASAS))}catch(x){}if(cod()==k)fill()});
+function tab(n){$("vprop").style.display=n==1?"":"none";$("vglob").style.display=n==2?"":"none";$("vval").style.display=n==3?"":"none";$("t1").className=n==1?"p":"";$("t2").className=n==2?"p":"";$("t3").className=n==3?"p":""}
+$("t1").onclick=function(){tab(1)};$("t2").onclick=function(){tab(2)};$("t3").onclick=function(){tab(3)};
+applyLang("es");fill();
+</script>
+</body>
+</html>
